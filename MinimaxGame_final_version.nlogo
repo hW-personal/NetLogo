@@ -79,7 +79,7 @@ to-report minimax [board]
 end
 
 to-report max_value [board depth]
-  ;if has-any-player-won? evaluate board or not moves-left? board board [report (list -1 -1 evaluate board)]
+  if has-any-player-won? evaluate board or not moves-left? board [report (list -1 -1 evaluate board)]
 
   let [x y result score] [-1 -1 [] -1000]
   let value [-1 -1 -1000]
